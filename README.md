@@ -2,6 +2,7 @@
 A simple full-stack application that allows users to add items with name and category and search items by name.
 
 ## Live Demo Link
+https://mini-item-directory.vercel.app/
 
 ## Tech Stack
 Backend:
