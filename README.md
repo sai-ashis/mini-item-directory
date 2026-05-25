@@ -3,7 +3,6 @@ A simple full-stack application that allows users to add items with name and cat
 
 ## Live Demo Link
 https://mini-item-directory.vercel.app/
-
 ## Tech Stack
 Backend:
 - Java 17 or higher
@@ -18,11 +17,25 @@ Frontend:
 - Maximum length: 20 characters
 
 ## Run Backend in Local
+
+Because this project is configured for deployment, you need to ensure the connection strings point to `localhost` when running locally.
+
 Prerequisites:
 - Java 17 or higher
 - Maven
 
-Commands:
+#### Steps
+1. Navigate to the backend directory:
+   ```bash
+   cd MiniDirectoryAppBackend
+
+2. Open src/main/java/com/example/minidirectory/CorsConfig.java and temporarily update the allowed origin to point to your local frontend:
+
+   // Change this line for local development:
+   ```java
+   config.setAllowedOrigins(Collections.singletonList("http://localhost:4200"));
+
+3. Run the following Commands:
 - mvn clean install
 - mvn spring-boot:run
 
@@ -34,7 +47,19 @@ Prerequisites:
 - Node.js
 - Angular CLI
 
-Commands:
+#### Steps
+1. Navigate to the backend directory:
+   ```bash
+   cd MiniDirectoryAppFrontend
+
+2. Open src/app/services/item.service.ts and temporarily change the apiUrl to target your local backend:
+
+   // Change this line for local development:  
+   ```typescript
+   private apiUrl = 'http://localhost:8080';
+
+Run the following Commands:
+- npm install
 - ng serve
 
 Frontend runs on:
