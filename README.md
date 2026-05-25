@@ -116,3 +116,5 @@ Streamlined the development lifecycle by configuring, building, and deploying th
 
 ## Using AI
 Throughout the process, I utilized Copilot and Claude to assist with the frontend development and to audit the codebase for efficiency and performance optimizations.
+
+> ⚠️ **Note on Live Demo:** This project is hosted on a free Render instance. If the application hasn't been visited recently, the backend may take 1-2 minutes on the initial load. Please allow a moment for the data to populate.
