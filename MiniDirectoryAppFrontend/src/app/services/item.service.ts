@@ -13,16 +13,16 @@ export class ItemService {
   constructor(private http: HttpClient) { }
 
   create(item: Item): Observable<Item> {
-    return this.http.post<Item>(this.apiUrl, item);
+    return this.http.post<Item>(`${this.apiUrl}/items`, item);
   }
 
   getAll(): Observable<Item[]> {
-    return this.http.get<Item[]>(this.apiUrl);
+    return this.http.get<Item[]>(`${this.apiUrl}/items`);
   }
 
   search(q: string): Observable<Item[]> {
     return this.http.get<Item[]>(
-      `${this.apiUrl}?q=${q}`
+      `${this.apiUrl}/items?q=${q}`
     );
   }
 }
