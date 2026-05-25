@@ -1,0 +1,24 @@
+<h2>Add Item</h2>
+
+<input [(ngModel)]="name" placeholder="Name" />
+<div *ngIf="nameError">
+  {{ nameError }}
+</div>
+
+<input [(ngModel)]="category" placeholder="Category" />
+
+<button (click)="addItem()">Add Item</button>
+
+<hr />
+
+<h2>Search Items</h2>
+
+<input
+  [(ngModel)]="searchText"
+  (input)="search()"
+  placeholder="Search by name"
+/>
+
+<ul>
+  <li *ngFor="let item of items">{{ item.name }} - {{ item.category }}</li>
+</ul>
