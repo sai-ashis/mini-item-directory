@@ -19,7 +19,7 @@ import com.example.minidirectory.service.ItemService;
 import jakarta.validation.Valid;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://mini-item-directory.vercel.app")
 @RequestMapping("/items")
 public class ItemController {
 
