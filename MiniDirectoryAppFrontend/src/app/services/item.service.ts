@@ -8,7 +8,7 @@ import { Item } from '../models/item';
 })
 export class ItemService {
 
-  private apiUrl = 'http://localhost:8080/items';
+  private apiUrl = 'https://mini-item-directory.onrender.com';
 
   constructor(private http: HttpClient) { }
 
